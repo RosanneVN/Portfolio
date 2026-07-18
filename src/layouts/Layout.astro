@@ -1,0 +1,41 @@
+---
+import 'animal-island-ui/style';
+import App from '../components/App';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Rosanne Vázquez — Full Stack Developer. React, Python, FastAPI, TypeScript. Building meaningful web applications." />
+    <meta property="og:title" content="Rosanne Vázquez | Full Stack Developer" />
+    <meta property="og:description" content="Full Stack Developer building meaningful web & mobile applications." />
+    <title>Rosanne Vázquez | Full Stack Developer</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #f8f8f0;
+        min-height: 100vh;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      section {
+        scroll-margin-top: 24px;
+      }
+      @media (max-width: 768px) {
+        section {
+          scroll-margin-top: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <App client:load />
+  </body>
+</html>
