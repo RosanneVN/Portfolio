@@ -29,7 +29,7 @@ export default function WelcomeCenter() {
       <div style={{ fontSize: 22, margin: '16px 0 32px', minHeight: 50, maxWidth: 600 }}>
         <Typewriter speed={70}>
           <span style={{ color: '#794f27', fontWeight: 700 }}>
-            Full Stack Developer · React · TypeScript · Python · AI
+            Software Engineer · React · TypeScript · Python · AI
           </span>
         </Typewriter>
       </div>

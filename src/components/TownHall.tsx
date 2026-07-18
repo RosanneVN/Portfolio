@@ -11,7 +11,7 @@ export default function TownHall() {
       <Card color="default">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <p style={{ fontSize: 17, lineHeight: 1.7, margin: 0 }}>
-            I'm a <strong>Full Stack Developer</strong> with professional experience building
+            I'm a <strong>Software Engenieer</strong> with professional experience building
             web and mobile applications across the frontend and backend layers.
             Skilled in <strong>React</strong>, <strong>TypeScript</strong>,{' '}
             <strong>Python</strong>, <strong>FastAPI</strong>, REST APIs, SQL databases,
@@ -32,7 +32,7 @@ export default function TownHall() {
             }}
           >
             {[
-              { label: 'Location', value: 'Havana, Cuba' },
+             
               { label: 'Languages', value: 'Spanish (Native) · English B1' },
               { label: 'Degree', value: 'B.Sc. Computer Engineering' },
               { label: 'Focus', value: 'Full Stack · AI Integration' },
