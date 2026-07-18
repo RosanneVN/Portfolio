@@ -5,8 +5,11 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   vite: {
+    resolve: {
+      noExternal: [/^animal-island-ui(\/.*)?$/],
+    },
     ssr: {
-      noExternal: ['animal-island-ui'],
+      noExternal: [/^animal-island-ui(\/.*)?$/],
     },
   },
 });
