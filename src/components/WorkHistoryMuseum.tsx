@@ -1,9 +1,8 @@
-import { Tabs } from 'animal-island-ui/es/components/Tabs/Tabs.js';
+import { useState } from 'react';
 import { Card } from 'animal-island-ui/es/components/Card/Card.js';
 import { Title } from 'animal-island-ui/es/components/Title/Title.js';
 import { Divider } from 'animal-island-ui/es/components/Divider/Divider.js';
 import { Button } from 'animal-island-ui/es/components/Button/Button.js';
-import type { TabItem } from 'animal-island-ui';
 
 function JobCard({
   role,
@@ -64,7 +63,7 @@ function JobCard({
   );
 }
 
-const jobs: TabItem[] = [
+const jobs = [
   {
     key: 'pasos',
     label: 'Pasos SOS',
@@ -139,6 +138,9 @@ const jobs: TabItem[] = [
 ];
 
 export default function WorkHistoryMuseum() {
+  const [activeJobKey, setActiveJobKey] = useState(jobs[0].key);
+  const activeJob = jobs.find((job) => job.key === activeJobKey) ?? jobs[0];
+
   return (
     <>
       <div style={{ textAlign: 'center' }}>
@@ -156,7 +158,50 @@ export default function WorkHistoryMuseum() {
           A tour through the places I've built, contributed to, and grown with.
         </p>
       </div>
-      <Tabs items={jobs} defaultActiveKey="pasos" leafAnimation />
+      <div style={{ display: 'grid', gap: 20 }}>
+        <div
+          role="tablist"
+          aria-label="Work history"
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 12,
+            justifyContent: 'center',
+          }}
+        >
+          {jobs.map((job) => {
+            const isActive = job.key === activeJob.key;
+
+            return (
+              <button
+                key={job.key}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => setActiveJobKey(job.key)}
+                style={{
+                  border: '1px solid rgba(121,79,39,0.18)',
+                  background: isActive ? '#fff4dd' : 'rgba(255,255,255,0.78)',
+                  color: isActive ? '#794f27' : '#725d42',
+                  borderRadius: 999,
+                  padding: '12px 18px',
+                  fontSize: 16,
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  boxShadow: isActive ? '0 8px 24px rgba(121,79,39,0.12)' : 'none',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease',
+                }}
+              >
+                {job.label}
+              </button>
+            );
+          })}
+        </div>
+
+        <div role="tabpanel" aria-label={activeJob.label}>
+          {activeJob.children}
+        </div>
+      </div>
     </>
   );
 }
