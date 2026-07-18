@@ -46,7 +46,7 @@ export default function WelcomeCenter() {
           fontWeight: 500,
         }}
       >
-        Building meaningful web and mobile applications across the full stack.
+        Building meaningful web and mobile applications across the stack.
         From responsive interfaces to AI-powered backends — turning complex
         problems into elegant, user-friendly solutions.
       </p>
