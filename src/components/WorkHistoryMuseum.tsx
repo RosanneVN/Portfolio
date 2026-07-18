@@ -1,4 +1,8 @@
-import { Tabs, Card, Title, Divider, Button } from 'animal-island-ui';
+import { Tabs } from 'animal-island-ui/es/components/Tabs/Tabs.js';
+import { Card } from 'animal-island-ui/es/components/Card/Card.js';
+import { Title } from 'animal-island-ui/es/components/Title/Title.js';
+import { Divider } from 'animal-island-ui/es/components/Divider/Divider.js';
+import { Button } from 'animal-island-ui/es/components/Button/Button.js';
 import type { TabItem } from 'animal-island-ui';
 
 function JobCard({
@@ -11,6 +15,7 @@ function JobCard({
   role: string;
   company: string;
   location: string;
+  
   period: string;
   details: string[];
 }) {

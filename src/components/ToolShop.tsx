@@ -1,4 +1,5 @@
-import { Title, Card } from 'animal-island-ui';
+import { Title } from 'animal-island-ui/es/components/Title/Title.js';
+import { Card } from 'animal-island-ui/es/components/Card/Card.js';
 
 const skillGroups = [
   {

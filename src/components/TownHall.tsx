@@ -1,4 +1,6 @@
-import { Card, Title, Divider } from 'animal-island-ui';
+import { Card } from 'animal-island-ui/es/components/Card/Card.js';
+import { Title } from 'animal-island-ui/es/components/Title/Title.js';
+import { Divider } from 'animal-island-ui/es/components/Divider/Divider.js';
 
 export default function TownHall() {
   return (

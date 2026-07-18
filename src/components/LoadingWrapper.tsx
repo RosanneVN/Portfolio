@@ -1,5 +1,6 @@
 import { useState, useEffect, type ReactNode } from 'react';
-import { Loading, Cursor } from 'animal-island-ui';
+import { Loading } from 'animal-island-ui/es/components/Loading/Loading.js';
+import { Cursor } from 'animal-island-ui/es/components/Cursor/Cursor.js';
 
 interface Props {
   children: ReactNode;

@@ -1,4 +1,7 @@
-import { Title, Card, Divider, Icon } from 'animal-island-ui';
+import { Title } from 'animal-island-ui/es/components/Title/Title.js';
+import { Card } from 'animal-island-ui/es/components/Card/Card.js';
+import { Divider } from 'animal-island-ui/es/components/Divider/Divider.js';
+import { Icon } from 'animal-island-ui/es/components/Icon/Icon.js';
 
 export default function SchoolOfEngineering() {
   return (

@@ -1,4 +1,6 @@
-import { Title, Typewriter, Button } from 'animal-island-ui';
+import { Title } from 'animal-island-ui/es/components/Title/Title.js';
+import { Typewriter } from 'animal-island-ui/es/components/Typewriter/Typewriter.js';
+import { Button } from 'animal-island-ui/es/components/Button/Button.js';
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
